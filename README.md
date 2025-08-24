@@ -1,4 +1,3 @@
-
 # 🏹 Kurukshetra 2025 – Hackathon
 
 Kurukshetra 2025 is a **24-hour offline hackathon** designed to foster collaboration, innovation, and problem-solving. Developers, students, and tech enthusiasts will work on cutting-edge technologies like **AI/ML, Agentic AI, Web 3.0, Cybersecurity, Blockchain, Cloud Computing, and Automation**.
@@ -102,6 +101,53 @@ Alandi, Pune, Maharashtra – 412105
 * Teams must follow deadlines & code of conduct.
 * Judges’ decisions are final.
 * PPT Template will be provided for final submissions.
+
+---
+
+## 🧭 Repository Setup & Branch Strategy
+
+Branch purposes:
+* main              → Stable, submission-ready code
+* dev               → Integrates all feature branches
+* feature/model     → ML / DL experiments
+* feature/agent     → Agentic AI (LLM, LangChain flows)
+* feature/frontend  → UI / UX implementation
+* feature/backend   → APIs & database logic
+* feature/data      → Data cleaning / preprocessing
+* docs              → Documentation, reports, PPTs
+* demo              → Demo assets (videos, screenshots)
+
+Setup commands (run once when starting the repo):
+```bash
+# Initialize repo with main as default (Git 2.28+)
+git init -b main
+
+# Optional first commit
+git add .
+git commit -m "Initial commit: Kurukshetra 2025 scaffold"
+
+# Create branches from main
+git branch dev
+git branch feature/model
+git branch feature/agent
+git branch feature/frontend
+git branch feature/backend
+git branch feature/data
+git branch docs
+git branch demo
+
+# Add remote (replace with your repo URL)
+git remote add origin https://github.com/ORG/kurukshetra-2025.git
+
+# Push all branches
+git push -u origin main
+git push origin dev feature/model feature/agent feature/frontend feature/backend feature/data docs demo
+```
+
+Workflow tip:
+1. Develop on a feature/* branch.
+2. Merge into dev after review.
+3. Merge dev into main only for stable release checkpoints.
 
 ---
 
