@@ -1,0 +1,12 @@
+This is a test PDF document for ConfluxAI Phase 2 testing.
+
+The document contains machine learning algorithms and data analysis concepts.
+
+Key topics:
+- Neural Networks
+- Deep Learning
+- Natural Language Processing
+- Computer Vision
+- Data Mining
+
+This content will be indexed and searchable through the hybrid search engine.

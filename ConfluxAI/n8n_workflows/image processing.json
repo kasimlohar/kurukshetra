@@ -1,0 +1,192 @@
+{
+  "name": "image processing",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "image-ingest",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -352,
+        0
+      ],
+      "name": "Webhook (Image Upload)",
+      "id": "2189dfe2-66c1-4f71-9bdb-76393c2a0d81",
+      "webhookId": "e85eb85c-4f2a-43e5-9fd9-57662959fbdb"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "index2",
+          "mode": "list",
+          "cachedResultName": "index2"
+        },
+        "embeddingBatchSize": 100,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        400,
+        -272
+      ],
+      "name": "Pinecone Vector Store (Images)",
+      "id": "f7912091-9197-4f3d-a5c5-6a37e1edb1c2",
+      "credentials": {
+        "pineconeApi": {
+          "id": "g8deX4j2MOCEJz8o",
+          "name": "PineconeApi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        480,
+        176
+      ],
+      "id": "e43885c9-c675-4822-85f9-65cd7a0f3a0d",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-1.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-1.5-flash"
+        },
+        "text": "describe in detail what the image shows in 1 paragraph",
+        "inputType": "binary",
+        "binaryPropertyName": "file",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        64,
+        0
+      ],
+      "id": "5d167964-13b8-4410-8105-a84e8a7d4214",
+      "name": "Analyze image",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "0APeLw1yZm1Relxl",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        336,
+        -64
+      ],
+      "id": "8cf6975e-83ed-4955-9e95-56f355ad164b",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "qNeo4iE7bxaRRs5g",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1,
+      "position": [
+        560,
+        -64
+      ],
+      "id": "8e260b05-505a-4a5d-8077-a77681979bdb",
+      "name": "Default Data Loader"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Pinecone Vector Store (Images)": {
+      "main": [
+        []
+      ]
+    },
+    "Webhook (Image Upload)": {
+      "main": [
+        [
+          {
+            "node": "Analyze image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze image": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Pinecone Vector Store (Images)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store (Images)",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Pinecone Vector Store (Images)",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "9365c322-6323-40bc-a3bf-0ace67f88334",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "6499e5de7985ff0038ea0e0c452fe8b107bfa42ac278b66233ecd909148ffaf0"
+  },
+  "id": "SzE8tfWHnKgPwWPK",
+  "tags": []
+}

@@ -1,355 +1,994 @@
-# 🔍 ConfluxAI - Multi-Modal AI Search Agent
+# 🤖 ConfluxAI - AI-Powered Multi-Media Knowl### 📤 File Upload System
+*Drag & drop multi-media file processing*
 
-[![Kurukshetra 2025](https://img.shields.io/badge/Kurukshetra-2025-orange)](https://linktr.ee/MozillaMitACSC)
-[![AI/ML Theme](https://img.shields.io/badge/Theme-AI%2FML%20%26%20Agentic%20AI-blue)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+<img src="docs/screenshots/file-upload.png" alt="File Upload System" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
 
-An intelligent AI research assistant that revolutionizes information discovery by seamlessly searching across text, images, tables, and documents simultaneously. Built for researchers, students, and professionals who need comprehensive, citation-grounded insights from diverse data sources.
+</div>
 
-> *"Bridging the gap between scattered information and unified knowledge discovery"*
+## 📋 Table of Contents/screenshots/file-upload.png" alt="File Upload System" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
 
----
+</div>ocs/screenshots/file-upload.png" alt="File Upload System" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
 
-## 🎯 Problem Statement (Kurukshetra 2025)
+</div>
+## 📋 Table of Contents
+<div align="center">
 
-**Multi-Modal AI Search Agent**: Build an AI agent that can search across text, images, and documents simultaneously.
+![ConfluxAI Banner](https://img.shields.io/badge/ConfluxAI-Multi--Media%20Knowledge%20Base-blue?style=for-the-badge&logo=artificial-intelligence)
 
-### Key Challenges Addressed:
-- ✅ **Multi-modal embedding alignment** (text vs. image vs. structured table regions)
-- ✅ **Semantic ranking** across different content types
-- ✅ **Result summarization** with proper citations
-- ✅ **Cross-modal search** capabilities
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat&logo=node.js)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-4.21.2-000000?style=flat&logo=express)](https://expressjs.com/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.14-646CFF?style=flat&logo=vite)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.17-06B6D4?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/kasimlohar/kurukshetra?style=social)](https://github.com/kasimlohar/kurukshetra/stargazers)
 
----
+*An intelligent multi-media knowledge base that processes documents, images, videos, and audio files using AI workflows powered by n8n automation.*
 
-## 🚀 Core Features
+[🚀 Live Demo](https://conflux-ai.vercel.app) • [✨ Features](#features) • [🛠️ Installation](#installation) • [📖 Usage](#usage) • [🔧 Configuration](#configuration) • [🤝 Contributing](#contributing)
 
-### 🔄 Multi-Modal Ingestion
-- **PDF Processing**: Extract text, tables, figures, and captions
-- **Web Scraping**: Clean HTML content with structured data extraction
-- **Image Analysis**: OCR and visual content understanding
-- **Document Parsing**: Support for various file formats
+**⭐ If you find this project helpful, please consider giving it a star!**
 
-### 🧠 Intelligent Search
-- **Semantic Search**: Dense vector embeddings for contextual understanding
-- **Hybrid Retrieval**: Combines dense + sparse (BM25) ranking
-- **Cross-Modal Queries**: Find relevant content across all modalities
-- **Smart Reranking**: Modality-aware scoring with proximity analysis
+</div>
 
-### 📊 Grounded Summarization
-- **Citation-Enforced**: Every claim backed by source references
-- **Multi-Modal Results**: Text passages, table data, and figure insights
-- **JSON Output**: Structured responses with metadata
-- **Visual References**: Direct links to figures and tables
+## � Screenshots
 
----
+<div align="center">
 
-## 🏗️ Architecture Overview
+### 🏠 Main Interface
+*Modern glassmorphism design with intuitive navigation*
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│  Ingestion  │ -> │ Normalizer  │ -> │   Chunker   │
-│   Pipeline  │    │   Module    │    │   Engine    │
-└─────────────┘    └─────────────┘    └─────────────┘
-       │                   │                   │
-   PDF Parser          Web Scraper        Image OCR
-   Table Extract       HTML Cleaner       Caption Gen
-       │                   │                   │
-       └───────────────────┼───────────────────┘
-                           ▼
-              ┌─────────────────────────┐
-              │   Embedding Pipeline    │
-              │ Text + Image Encoders   │
-              │  Alignment Projection   │
-              └─────────────────────────┘
-                           │
-                           ▼
-              ┌─────────────────────────┐
-              │   Vector Store +        │
-              │    Metadata DB          │
-              │  (pgvector/Qdrant)      │
-              └─────────────────────────┘
-                           │
-                           ▼
-              ┌─────────────────────────┐
-              │   Hybrid Retrieval      │
-              │ Dense + Sparse + Rerank │
-              └─────────────────────────┘
-                           │
-                           ▼
-              ┌─────────────────────────┐
-              │   Answer Generator      │
-              │ Citation-Constrained LLM│
-              └─────────────────────────┘
-                           │
-                           ▼
-              ┌─────────────────────────┐
-              │  Multi-Modal UI         │
-              │ Interactive Results     │
-              └─────────────────────────┘
-```
+<img src="docs/screenshots/main-interface.png" alt="ConfluxAI Main Interface" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
 
 ---
 
-## 📋 Data Model
+### 💬 AI Chat Interface
+*Intelligent conversation with your uploaded content*
 
-| Field | Description | Type |
-|-------|-------------|------|
-| `id` | Unique chunk identifier | UUID |
-| `source_id` | Original file/URL reference | String |
-| `modality` | Content type: text/table/figure/image | Enum |
-| `content_text` | Cleaned textual content or caption | Text |
-| `content_blob` | Serialized image/table data | BLOB |
-| `vector` | Dense embedding (1536d) | Vector |
-| `tokens` | Token count for cost estimation | Integer |
-| `page_num` | PDF page number (if applicable) | Integer |
-| `bbox` | Normalized coordinates for highlighting | JSON |
-| `metadata` | Headers, alt text, table schema | JSON |
+<img src="docs/screenshots/chat-interface.png" alt="AI Chat Interface" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
 
 ---
 
-## 🛠️ Tech Stack
+### 📤 File Upload System
+*Drag & drop multi-media file processing*
 
-| Component | Technology | Purpose |
-|-----------|------------|---------|
-| **PDF Processing** | pdfplumber, PyMuPDF | Text & layout extraction |
-| **Table Extraction** | Camelot, pdfplumber | Structured data parsing |
-| **Web Scraping** | Playwright, trafilatura | Clean content extraction |
-| **OCR Engine** | Tesseract, PaddleOCR | Image text recognition |
-| **Text Embeddings** | OpenAI text-embedding-3-large | Semantic vectors |
-| **Image Embeddings** | CLIP, SigLIP | Visual understanding |
-| **Vector Database** | PostgreSQL pgvector | Scalable similarity search |
-| **Backend API** | FastAPI | High-performance API |
-| **Reranking** | bge-reranker | Cross-encoder scoring |
-| **LLM Integration** | OpenAI GPT-4 | Citation-grounded summaries |
-| **Frontend** | React, TypeScript | Interactive UI |
-| **Workflow** | n8n | Automation pipeline |
+<img src="docs/screenshots/file-upload.png" alt="File Upload System" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
 
----
+</div>
 
-## 🎯 Retrieval Strategy
+## �📋 Table of Contents
 
-### 1. Query Processing
-- Embed user query using text encoder
-- Extract key entities and intent
+- [Screenshots](#-screenshots)
+- [Features](#-features)
+- [Architecture](#️-architecture)
+- [Quick Start](#-quick-start)
+- [Usage Guide](#-usage-guide)
+- [Configuration](#-configuration)
+- [Deployment](#-deployment)
+- [Development](#️-development)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Support](#-support--issues)
+- [Roadmap](#-roadmap)
 
-### 2. Candidate Generation
-- **Dense Search**: kNN vector similarity
-- **Sparse Search**: BM25 keyword matching
-- **Hybrid Fusion**: Reciprocal rank fusion
+## ✨ Features
 
-### 3. Modality-Aware Reranking
-```
-score = α × dense_sim + β × sparse_sim + γ × modality_boost + δ × structural_proximity
-```
+### 🧠 **AI-Powered Processing**
+- 🤖 **Intelligent Document Analysis**: Extract and analyze content from PDFs with AI
+- 👁️ **Image Recognition**: Process and understand visual content using advanced AI models  
+- 🎬 **Video Intelligence**: Extract insights and transcripts from video files
+- 🎵 **Audio Processing**: Transcribe and analyze audio content with speech-to-text
+- 💬 **Smart Chat Interface**: Conversational AI that can query and understand processed content
+- 🔍 **Semantic Search**: Find relevant information across all your uploaded files
+- 🧠 **Context-Aware Responses**: AI maintains conversation context and provides relevant answers
 
-### 4. Diversification
-- Avoid over-clustering on single pages
-- Ensure modality balance in results
+### 🎨 **Modern UI & Experience**
+- 🌈 **Glassmorphism Design**: Beautiful glass-effect components with backdrop blur
+- 🌙 **Smart Theme System**: Auto-detects system preferences with manual override (light/dark/system)
+- 🎭 **Smooth Animations**: Framer Motion powered micro-interactions respecting accessibility
+- ⌨️ **Full Keyboard Navigation**: Complete keyboard accessibility with proper ARIA support
+- 📱 **Responsive Design**: Optimized for all screen sizes from mobile to desktop
+- 🚀 **Performance Optimized**: Lazy loading, code splitting, and optimized bundle sizes
+- ♿ **WCAG AA Compliant**: Color contrast, focus management, and screen reader support
 
-### 5. Citation Preparation
-- Pass top-N chunks to summarizer with strict citation enforcement
+### 📁 **Multi-Media Support**
+- 📄 **PDF Documents** (.pdf - up to 10MB)
+- 🖼️ **Images** (.jpg, .png, .gif, .webp - up to 10MB)
+- 🎬 **Videos** (.mp4, .avi, .mov, .webm - up to 100MB)
+- 🎵 **Audio** (.mp3, .wav, .ogg, .m4a - up to 50MB)
 
----
+### 🎨 **Modern UI/UX**
+- 📱 **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
+- 🌓 **Dark/Light Themes**: User preference-based theming with system detection
+- 🎯 **Drag & Drop**: Intuitive file upload experience with visual feedback
+- ⚡ **Real-time Progress**: Live upload and processing status with progress bars
+- 📊 **Interactive Dashboard**: Organized document management with search and filters
+- ♿ **Accessibility**: Full keyboard navigation and screen reader support
 
-## 📊 Output Schema
+### 🔧 **Technical Features**
+- 🔄 **n8n Workflow Integration**: Automated processing pipelines with visual workflow editor
+- 🔐 **Authentication System**: Secure user management with session-based auth
+- 📡 **Real-time Updates**: WebSocket-based live updates for processing status
+- 🛡️ **Error Handling**: Comprehensive error management with user-friendly messages
+- 🔒 **Type Safety**: Full TypeScript implementation for better code quality
+- ⚡ **Performance Optimized**: Lazy loading, code splitting, and caching strategies
+- 🐳 **Docker Ready**: Containerized deployment support
+- 🔄 **CI/CD Ready**: GitHub Actions workflows included
 
-```json
-{
-  "answer": "The proposed model outperforms baselines through architectural improvements...",
-  "citations": [
-    {
-      "chunk_id": "T07",
-      "page": 6,
-      "modality": "table",
-      "source": "research_paper.pdf"
-    },
-    {
-      "chunk_id": "F12",
-      "page": 4,
-      "modality": "figure",
-      "source": "research_paper.pdf"
-    }
-  ],
-  "figures": [
-    {
-      "chunk_id": "F12",
-      "caption": "Architecture comparison showing 15% improvement",
-      "page": 4
-    }
-  ],
-  "confidence": 0.89,
-  "query_time_ms": 847
-}
+## 🏗️ Architecture
+
+<div align="center">
+
+```mermaid
+graph TB
+    subgraph "Frontend Layer"
+        A[React + TypeScript + Vite]
+        B[Tailwind CSS + shadcn/ui]
+        C[React Router + Query]
+    end
+    
+    subgraph "Backend Layer"
+        D[Express.js Server]
+        E[Vercel Functions]
+        F[Authentication Layer]
+    end
+    
+    subgraph "AI Processing Layer"
+        G[n8n Workflows]
+        H[Google Gemini API]
+        I[Vector Database]
+    end
+    
+    subgraph "Data Layer"
+        J[PostgreSQL/SQLite]
+        K[File Storage]
+        L[Session Store]
+    end
+    
+    A --> D
+    A --> E
+    D --> F
+    E --> F
+    F --> G
+    G --> H
+    G --> I
+    D --> J
+    E --> J
+    D --> K
+    E --> K
+    F --> L
 ```
 
----
+</div>
+
+### 📁 Project Structure
+
+```
+ConfluxAI/
+├── 🎨 client/                 # React Frontend Application
+│   ├── src/
+│   │   ├── components/        # Reusable UI components
+│   │   │   ├── ui/           # Basic UI components (shadcn/ui)
+│   │   │   ├── Auth/         # Authentication components
+│   │   │   └── ...           # Feature-specific components
+│   │   ├── pages/            # Application pages/routes
+│   │   ├── hooks/            # Custom React hooks
+│   │   ├── lib/              # Utilities and helper functions
+│   │   └── types/            # TypeScript type definitions
+│   ├── public/               # Static assets (images, icons, etc.)
+│   └── index.html            # Main HTML template
+├── 🔧 api/                   # Vercel Serverless Functions
+│   ├── webhook/              # n8n webhook handlers
+│   │   └── n8n.ts           # Main webhook endpoint
+│   ├── upload-pdf.ts         # PDF processing endpoint
+│   ├── upload-image.ts       # Image processing endpoint
+│   ├── upload-video.ts       # Video processing endpoint
+│   ├── upload-audio.ts       # Audio processing endpoint
+│   └── dev-server.ts         # Development server setup
+├── 🖥️ server/               # Express.js Backend (Development)
+│   ├── index.ts              # Main server entry point
+│   ├── routes.ts             # API route definitions
+│   ├── storage.ts            # File storage management
+│   └── vite.ts               # Vite integration for SSR
+├── 🤖 n8n_workflows/        # Automation Workflows
+│   ├── AI agent.json         # Main AI processing workflow
+│   ├── pdf_saving_func.json  # PDF processing workflow
+│   ├── image processing.json # Image analysis workflow
+│   ├── video processing.json # Video processing workflow
+│   └── audio processing.json # Audio transcription workflow
+├── 📋 shared/               # Shared utilities
+│   └── schema.ts             # TypeScript type definitions
+├── 🔧 Configuration Files
+│   ├── package.json          # Dependencies and scripts
+│   ├── tsconfig.json         # TypeScript configuration
+│   ├── vite.config.ts        # Vite build configuration
+│   ├── tailwind.config.ts    # Tailwind CSS configuration
+│   ├── drizzle.config.ts     # Database ORM configuration
+│   └── vercel.json           # Vercel deployment settings
+└── 📚 Documentation
+    ├── README.md             # Main project documentation
+    ├── CONTRIBUTING.md       # Contribution guidelines
+    ├── CHANGELOG.md          # Version history
+    ├── DEPLOYMENT.md         # Deployment instructions
+    └── .env.example          # Environment variables template
+```
 
 ## 🚀 Quick Start
 
-### Prerequisites
-```bash
-# Python 3.9+
-pip install -r requirements.txt
+### 📋 Prerequisites
 
-# Node.js 18+ (for frontend)
+Before you begin, ensure you have the following installed:
+
+- **Node.js** 18+ ([Download](https://nodejs.org/))
+- **npm** or **yarn** package manager  
+- **Git** for version control
+- **n8n instance** (self-hosted or cloud) - [Setup Guide](https://docs.n8n.io/)
+- **Google Gemini API key** (free tier available) - [Get API Key](https://ai.google.dev/)
+
+### 1️⃣ Clone the Repository
+
+```bash
+# Clone the repository
+git clone https://github.com/kasimlohar/kurukshetra.git
+
+# Navigate to the ConfluxAI directory
+cd kurukshetra/ConfluxAI
+
+# Check Node.js version (should be 18+)
+node --version
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+# Install all dependencies
 npm install
 
-# PostgreSQL with pgvector extension
-# Or Docker setup (recommended)
+# Verify installation
+npm list --depth=0
 ```
 
-### Environment Setup
+### 3️⃣ Environment Setup
+
 ```bash
-# Copy environment template
+# Copy the environment template
 cp .env.example .env
 
-# Configure your API keys
-OPENAI_API_KEY=your_openai_key
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_supabase_key
+# Open .env file in your preferred editor
+# Windows
+notepad .env
+
+# macOS/Linux
+nano .env
+# or
+code .env
 ```
 
-### Running the Application
+### 4️⃣ Configure Environment Variables
 
-#### Backend
+**Required Variables:**
+
+Open `.env` file and update the following essential variables:
+
 ```bash
-# Start the API server
-python -m uvicorn main:app --reload --port 8000
+# ====== GOOGLE GEMINI API (FREE TIER) ======
+# Get your free API key from: https://ai.google.dev/
+GOOGLE_GEMINI_API_KEY=your_free_gemini_api_key_here
+
+# ====== N8N WORKFLOW AUTOMATION ======  
+# Your n8n instance URL (self-hosted or cloud)
+N8N_BASE_URL=http://localhost:5678
+N8N_WEBHOOK_AUTH=your_webhook_auth_token
+
+# ====== DATABASE CONFIGURATION ======
+# For development, you can use SQLite (no setup required)
+DATABASE_URL=sqlite:./local.db
+# For production, use PostgreSQL:
+# DATABASE_URL=postgresql://username:password@localhost:5432/conflux_ai
+
+# ====== AUTHENTICATION ======
+SESSION_SECRET=your-super-secure-session-secret-here
 ```
 
-#### Frontend
+**Optional Variables for Enhanced Features:**
+
 ```bash
-# Start the React development server
+# ====== VECTOR DATABASE (OPTIONAL) ======
+PINECONE_API_KEY=your_pinecone_api_key
+PINECONE_ENVIRONMENT=your_pinecone_environment
+
+# ====== ADDITIONAL AI FEATURES (OPTIONAL) ======
+OPENAI_API_KEY=your_openai_api_key  # For embeddings
+SERP_API_KEY=your_serp_api_key      # For web search
+```
+
+### 5️⃣ Set up n8n Workflows
+
+1. **Start your n8n instance**:
+```bash
+# If using Docker
+docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n
+
+# If installed globally
+n8n start
+```
+
+2. **Import workflows**:
+   - Open n8n interface (http://localhost:5678)
+   - Go to Workflows → Import from File
+   - Import all JSON files from `n8n_workflows/` directory
+   - Configure your API keys in each workflow
+
+3. **Update webhook URLs** in your `.env` file with the actual webhook URLs from n8n
+
+### 6️⃣ Build and Start
+
+```bash
+# Build the application
+npm run build
+
+# Start development server with hot reload
 npm run dev
+
+# OR start with Vercel-compatible mode
+npm run dev:vercel
 ```
 
-#### n8n Workflows (Optional)
+### 7️⃣ Access the Application
+
+Once the server starts successfully:
+
+- 🌐 **Frontend**: http://localhost:5000
+- 🔌 **API**: http://localhost:5000/api  
+- 📄 **Upload Endpoints**: http://localhost:5000/api/upload-*
+- 🤖 **n8n Interface**: http://localhost:5678
+
+### 🚀 Verification
+
+Test your setup by:
+
+1. **Creating an account** at http://localhost:5000
+2. **Uploading a test file** (try a small PDF first)
+3. **Asking a question** in the chat interface about the uploaded file
+4. **Checking n8n logs** to verify workflow execution
+
+### 🔧 Troubleshooting
+
+**Common issues:**
+
 ```bash
-# Import automation workflows
-npm run import-workflows
+# Port already in use
+npm run dev -- --port 3000
+
+# Clear cache and reinstall
+rm -rf node_modules package-lock.json
+npm install
+
+# Check logs for errors
+npm run dev 2>&1 | tee debug.log
 ```
 
----
+**Need help?** Check our [Troubleshooting Guide](./TROUBLESHOOTING.md) or open an issue.
 
-## 💡 Demo Scenarios
+## 📖 Usage Guide
 
-### Research Assistant Demo
-1. **Upload**: Research paper with tables and diagrams
-2. **Query**: "Compare model accuracy and architectural components"
-3. **Results**: 
-   - Mixed modality results (text + figures + tables)
-   - Grounded answer with inline citations
-   - Interactive citation highlighting
-4. **Export**: Formatted report with sources
+### 🔐 Authentication
 
-### Example Queries
-- *"What are the main performance improvements over baseline methods?"*
-- *"Show me all tables related to accuracy metrics"*
-- *"Find architectural diagrams that explain the model design"*
-- *"Compare results across different datasets"*
+1. **Sign Up**: Create a new account with email and password
+2. **Login**: Access your personalized knowledge base
+3. **Protected Routes**: All features require authentication
 
----
+### 📤 File Upload
 
-## 📈 Evaluation Metrics
+1. **Select File Type**: Choose from PDF, Image, Video, or Audio tabs
+2. **Drag & Drop**: Drop files or click to browse
+3. **Monitor Progress**: Watch real-time upload and processing status
+4. **View Results**: Access processed content in the Documents dashboard
 
-| Metric | Method | Target |
-|--------|--------|--------|
-| **Retrieval Precision@5** | Labeled relevance sets | >0.85 |
-| **Rerank Gain** | nDCG improvement | >15% |
-| **Answer Faithfulness** | Citation coverage % | >90% |
-| **Query Latency** | End-to-end response | <2s |
-| **Multi-Modal Coverage** | Result diversity | Balanced |
+### 💬 Chat Interface
 
----
+1. **Ask Questions**: Query your uploaded content using natural language
+2. **Contextual Responses**: Get AI-powered answers based on your documents
+3. **Multi-Modal**: Reference content from any uploaded file type
+4. **Conversation History**: Previous chats are automatically saved
 
-## 🎯 Hackathon Roadmap
+### 📊 Document Management
 
-### Day 1 Morning (24th Aug 9:00-13:00)
-- [x] PDF + web ingestion pipeline
-- [x] Basic text + caption embedding
-- [x] Vector database setup
+1. **Dashboard View**: See all uploaded and processed files
+2. **Search & Filter**: Find specific documents quickly
+3. **Status Tracking**: Monitor processing status and errors
+4. **Metadata**: View file details, upload dates, and processing results
 
-### Day 1 Evening (24th Aug 14:00-21:00)
-- [x] Hybrid retrieval implementation
-- [x] Simple query interface
-- [x] Basic result display
+## 🔧 Configuration
 
-### Day 2 Morning (25th Aug 6:00-10:00)
-- [x] Reranking algorithm
-- [x] Citation-based summarization
-- [x] Multi-modal result panel
+### n8n Workflow Setup
 
-### Day 2 Final (25th Aug 10:00-12:30)
-- [x] Demo preparation
-- [x] Evaluation examples
-- [x] Final polish & testing
+1. **Import Workflows**: Import JSON files from `n8n_workflows/` to your n8n instance
+2. **Configure Webhooks**: Update webhook URLs in your environment variables
+3. **Set API Keys**: Configure Google Gemini API in n8n workflows
+4. **Test Endpoints**: Verify all webhook endpoints are responding
 
----
+### API Endpoints
 
-## 🔮 Future Enhancements
+| Endpoint | Method | Purpose | File Types |
+|----------|--------|---------|------------|
+| `/api/webhook/n8n` | POST | Chat processing | - |
+| `/api/upload-pdf` | POST | PDF processing | .pdf |
+| `/api/upload-image` | POST | Image analysis | .jpg, .png, .gif, .webp |
+| `/api/upload-video` | POST | Video processing | .mp4, .avi, .mov, .webm |
+| `/api/upload-audio` | POST | Audio transcription | .mp3, .wav, .ogg, .m4a |
 
-- **Query Refinement**: Auto-generated facets and suggestions
-- **Visual Similarity**: Upload image to find similar content
-- **Temporal Awareness**: Time-based result weighting
-- **Confidence Scoring**: Answer reliability metrics
-- **Multi-Language Support**: Cross-language search capabilities
+### File Size Limits
 
----
+- **PDFs**: 10MB maximum
+- **Images**: 10MB maximum  
+- **Videos**: 100MB maximum
+- **Audio**: 50MB maximum
 
-## ⚠️ Risks & Mitigations
+## 🚀 Deployment
 
-| Risk | Impact | Mitigation |
-|------|--------|------------|
-| **Embedding Mismatch** | Poor cross-modal results | CLIP projection alignment |
-| **Noisy OCR** | Inaccurate text extraction | Confidence filtering + fallbacks |
-| **Hallucinated Summaries** | Unreliable answers | Strict citation enforcement |
-| **High Latency** | Poor user experience | Embedding caching + batch queries |
-| **Scale Limitations** | Performance degradation | Efficient indexing + query optimization |
+### 🌟 Vercel Deployment (Recommended)
 
----
+**Step-by-step deployment to Vercel:**
 
-## 👥 Team Contributions
+1. **Prepare your repository**:
+```bash
+# Ensure all changes are committed
+git add .
+git commit -m "feat: prepare for deployment"
+git push origin main
+```
 
-| Role | Contributor | Responsibilities |
-|------|-------------|------------------|
-| **Data Engineering** | [Name] | Ingestion pipeline, preprocessing |
-| **ML/AI Research** | [Name] | Embedding models, retrieval algorithms |
-| **Backend Development** | [Name] | API design, database optimization |
-| **Frontend Development** | [Name] | UI/UX, user interface |
-| **DevOps & Demo** | [Name] | Deployment, demo preparation |
+2. **Deploy to Vercel**:
+   - Visit [vercel.com](https://vercel.com) and sign in with GitHub
+   - Click "New Project" and import your repository
+   - Configure build settings:
+     - **Framework Preset**: Other
+     - **Build Command**: `npm run build:vercel`
+     - **Output Directory**: `dist/public`
+     - **Install Command**: `npm install`
+     - **Node.js Version**: 18.x
 
----
+3. **Environment Variables**:
+   Add all required environment variables from `.env.example` in Vercel dashboard:
+   - Go to Project Settings → Environment Variables
+   - Add each variable from your `.env` file
+   - ⚠️ **Important**: Use production URLs for webhooks and databases
+
+4. **Custom Domain** (Optional):
+   - Go to Project Settings → Domains
+   - Add your custom domain
+   - Configure DNS settings as instructed
+
+### 🐳 Docker Deployment
+
+**Create Dockerfile:**
+
+```dockerfile
+# Use official Node.js runtime as base image
+FROM node:18-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production
+
+# Copy source code
+COPY . .
+
+# Build application
+RUN npm run build
+
+# Production stage
+FROM node:18-alpine AS production
+
+WORKDIR /app
+
+# Copy built application
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/node_modules ./node_modules
+
+# Expose port
+EXPOSE 5000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD curl -f http://localhost:5000/api/health || exit 1
+
+# Start application
+CMD ["npm", "start"]
+```
+
+**Docker Compose setup:**
+
+```yaml
+version: '3.8'
+
+services:
+  conflux-ai:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - n8n
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: conflux_ai
+      POSTGRES_USER: conflux_user
+      POSTGRES_PASSWORD: conflux_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  n8n:
+    image: n8nio/n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=admin
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  postgres_data:
+  n8n_data:
+```
+
+**Deploy with Docker:**
+
+```bash
+# Build and run
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop services
+docker-compose down
+```
+
+### ☁️ Cloud Platforms
+
+#### **Railway**
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
+
+# Login and deploy
+railway login
+railway link
+railway up
+```
+
+#### **Render**
+```bash
+# Connect repository at render.com
+# Set build command: npm run build
+# Set start command: npm start
+```
+
+#### **DigitalOcean App Platform**
+```yaml
+# app.yaml
+name: conflux-ai
+services:
+- name: web
+  source_dir: /
+  github:
+    repo: kasimlohar/kurukshetra
+    branch: main
+  run_command: npm start
+  build_command: npm run build
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xxs
+```
+
+### 🔧 Production Checklist
+
+Before deploying to production:
+
+- [ ] **Environment Variables**: All required variables are set
+- [ ] **Database**: Production database is configured and accessible
+- [ ] **n8n Workflows**: All workflows are imported and tested
+- [ ] **API Keys**: All API keys are valid and have sufficient quotas
+- [ ] **Domain**: Custom domain is configured (if needed)
+- [ ] **SSL**: HTTPS is enabled
+- [ ] **Monitoring**: Error tracking and analytics are set up
+- [ ] **Backups**: Database backup strategy is in place
+- [ ] **Security**: Security headers and rate limiting are configured
+
+### 📊 Monitoring & Analytics
+
+**Recommended tools:**
+
+- **Error Tracking**: [Sentry](https://sentry.io/)
+- **Analytics**: [Google Analytics](https://analytics.google.com/)
+- **Uptime Monitoring**: [UptimeRobot](https://uptimerobot.com/)
+- **Performance**: [Vercel Analytics](https://vercel.com/analytics)
+
+## 🛠️ Development
+
+### Project Structure
+
+- **Frontend**: React + TypeScript + Vite + Tailwind CSS
+- **Backend**: Express.js + TypeScript for development, Vercel Functions for production
+- **Database**: Drizzle ORM with PostgreSQL/SQLite support
+- **Authentication**: Custom auth system with session management
+- **AI Integration**: n8n workflows with Google Gemini API
+- **Styling**: Tailwind CSS + shadcn/ui components
+
+### Tech Stack
+
+| Category | Technology | Purpose |
+|----------|------------|---------|
+| **Frontend** | React 18.3 | UI framework |
+| **Language** | TypeScript 5.6 | Type safety |
+| **Build Tool** | Vite 5.4 | Fast development and building |
+| **Styling** | Tailwind CSS 3.4 | Utility-first CSS |
+| **UI Components** | Radix UI + shadcn/ui | Accessible component library |
+| **Backend** | Express.js 4.21 | Web framework |
+| **Database ORM** | Drizzle 0.39 | Type-safe database queries |
+| **Authentication** | Passport.js | Authentication middleware |
+| **File Upload** | Multer 2.0 | Multipart form handling |
+| **Automation** | n8n | Workflow automation |
+| **AI** | Google Gemini | Language model |
+
+### Available Scripts
+
+```bash
+# Development
+npm run dev              # Start Express development server
+npm run dev:vercel       # Start Vercel-compatible dev server
+
+# Building
+npm run build            # Build for production
+npm run build:vercel     # Build for Vercel deployment
+
+# Database
+npm run db:push          # Push database schema changes
+
+# Type Checking
+npm run check            # TypeScript type checking
+```
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Whether you're fixing bugs, adding features, improving documentation, or suggesting ideas, your help is appreciated.
+
+### 🚀 Quick Contribution Guide
+
+1. **🍴 Fork the repository**
+2. **🌿 Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **✨ Make your changes**: Follow our coding standards
+4. **✅ Test your changes**: Ensure everything works correctly
+5. **📝 Commit changes**: `git commit -m 'feat: add amazing feature'`
+6. **🚀 Push to branch**: `git push origin feature/amazing-feature`  
+7. **🔄 Open a Pull Request**: Describe your changes clearly
+
+### 📋 Contribution Types
+
+| Type | Description | Examples |
+|------|-------------|----------|
+| 🐛 **Bug Fixes** | Fix issues and problems | Error handling, UI bugs, API fixes |
+| ✨ **New Features** | Add new functionality | New file types, AI models, UI components |
+| 📚 **Documentation** | Improve docs and guides | README updates, API docs, tutorials |
+| 🎨 **UI/UX Improvements** | Enhance user experience | Design improvements, accessibility |
+| ⚡ **Performance** | Optimize speed and efficiency | Code optimization, caching, bundling |
+| 🔒 **Security** | Security enhancements | Authentication, data validation |
+
+### 💻 Development Guidelines
+
+**Code Style:**
+- Use **TypeScript** for all new code
+- Follow **ESLint** and **Prettier** configurations
+- Use **conventional commit** messages
+- Add **JSDoc comments** for complex functions
+- Maintain **test coverage** for new features
+
+**Commit Convention:**
+```bash
+feat: add new feature
+fix: resolve bug
+docs: update documentation  
+style: formatting changes
+refactor: code restructuring
+test: add or update tests
+chore: maintenance tasks
+```
+
+**Before Submitting:**
+- [ ] Code follows style guidelines
+- [ ] All tests pass locally
+- [ ] Documentation is updated
+- [ ] Changes are tested manually
+- [ ] No console errors or warnings
+
+### 🐛 Reporting Issues
+
+**Bug Reports** should include:
+- Clear description of the issue
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots (if applicable)
+- Environment details (OS, browser, Node.js version)
+
+**Feature Requests** should include:
+- Problem description
+- Proposed solution
+- Use cases and benefits
+- Implementation ideas (optional)
+
+### 📖 Development Resources
+
+- **Style Guide**: [CONTRIBUTING.md](./CONTRIBUTING.md)
+- **API Documentation**: [API.md](./docs/API.md)
+- **Architecture Guide**: [ARCHITECTURE.md](./docs/ARCHITECTURE.md)
+- **Troubleshooting**: [TROUBLESHOOTING.md](./docs/TROUBLESHOOTING.md)
+
+### 🙏 Recognition
+
+Contributors are recognized in:
+- README contributors section
+- Release notes and changelogs
+- Special mentions in major releases
+
+### 💬 Getting Help
+
+- **💬 Discussions**: [GitHub Discussions](https://github.com/kasimlohar/kurukshetra/discussions)
+- **🐛 Issues**: [GitHub Issues](https://github.com/kasimlohar/kurukshetra/issues)
+- **📧 Email**: kasimlohar@example.com
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🆘 Support & Issues
+
+- **Issues**: [GitHub Issues](https://github.com/kasimlohar/kurukshetra/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/kasimlohar/kurukshetra/discussions)
+- **Email**: kasimlohar@example.com
+
+## 🙏 Acknowledgments
+
+- **n8n Community** for excellent workflow automation
+- **Google AI** for free Gemini API access
+- **Vercel** for seamless deployment platform
+- **Radix UI** for accessible component primitives
+- **Tailwind CSS** for utility-first styling
+
+## 🔮 Roadmap
+
+### 🎯 Short Term (Q1 2025)
+
+- [ ] **🔍 Enhanced Search**: Advanced semantic search with filters
+- [ ] **📱 Mobile App**: React Native companion application
+- [ ] **🔄 Batch Processing**: Multiple file upload and processing
+- [ ] **📊 Analytics Dashboard**: Usage insights and metrics
+- [ ] **🔐 Advanced Auth**: OAuth integration (Google, GitHub)
+- [ ] **🌐 Multi-language**: Internationalization support
+
+### 🚀 Medium Term (Q2-Q3 2025)
+
+- [ ] **🤝 Real-time Collaboration**: Multi-user document editing
+- [ ] **🔌 Plugin System**: Extensible workflow integrations  
+- [ ] **🏢 Team Management**: Organization and role-based access
+- [ ] **📈 Advanced Analytics**: Detailed usage and performance metrics
+- [ ] **🔒 Enterprise Security**: SSO, audit logs, compliance features
+- [ ] **💾 Version Control**: Document versioning and history
+
+### 🌟 Long Term (Q4 2025+)
+
+- [ ] **🧠 Custom AI Models**: Train domain-specific models
+- [ ] **🔗 API Marketplace**: Third-party integrations marketplace
+- [ ] **📱 Desktop Apps**: Native Windows, macOS, Linux applications
+- [ ] **🌍 Edge Computing**: Distributed processing capabilities
+- [ ] **🔮 Predictive Analytics**: AI-powered content recommendations
+- [ ] **🚀 Auto-scaling**: Intelligent resource management
+
+### 💡 Community Requested Features
+
+Vote for features on our [GitHub Discussions](https://github.com/kasimlohar/kurukshetra/discussions):
+
+- **🎥 Live Video Processing**: Real-time video analysis
+- **🗣️ Voice Commands**: Voice-controlled interface
+- **📋 Template System**: Pre-built workflow templates
+- **🔄 Workflow Marketplace**: Community-shared workflows
+- **📧 Email Integration**: Direct email document processing
+- **🌐 Web Scraping**: Automated web content extraction
+
 ---
 
-## 🏆 Acknowledgments
+<div align="center">
 
-- **Kurukshetra 2025** - Mozilla MIT ACSC for the inspiring hackathon
-- **Open Source Community** - For the amazing tools and libraries
-- **Research Community** - For advancing multi-modal AI techniques
+## 📜 License
 
----
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact & Support
+### 📄 License Summary
 
-- **Demo Video**: [YouTube Link](#)
-- **Live Demo**: [Deployed App](#)
-- **GitHub Issues**: [Report Issues](../../issues)
-- **Team Email**: [confluxai.team@email.com](#)
+✅ **Permitted**: Commercial use, modification, distribution, private use  
+⚠️ **Required**: Include copyright and license notice  
+❌ **Forbidden**: Hold liable  
 
----
-
-### 🎯 Hackathon Judges
-
-**ConfluxAI** represents the future of intelligent information discovery - where every search transcends modality boundaries to deliver comprehensive, trustworthy insights. Our solution directly addresses the critical need for unified semantic search across diverse content types, making research and knowledge discovery more efficient and reliable than ever before.
-
-*Ready to revolutionize how we search and discover information? Let's make it happen at Kurukshetra 2025!* 🚀
+</div>
 
 ---
 
-**Built with ❤️ for Kurukshetra 2025 Hackathon**
+## 🆘 Support & Issues
+
+### 🐛 Found a Bug?
+
+1. **Check existing issues**: [GitHub Issues](https://github.com/kasimlohar/kurukshetra/issues)
+2. **Create detailed report**: Include steps to reproduce, expected behavior, screenshots
+3. **Label appropriately**: Use `bug`, `enhancement`, `question` labels
+
+### 💬 Need Help?
+
+| Type | Platform | Response Time |
+|------|----------|---------------|
+| 🐛 **Bug Reports** | [GitHub Issues](https://github.com/kasimlohar/kurukshetra/issues) | 24-48 hours |
+| 💡 **Feature Requests** | [GitHub Discussions](https://github.com/kasimlohar/kurukshetra/discussions) | 2-3 days |
+| ❓ **General Questions** | [GitHub Discussions](https://github.com/kasimlohar/kurukshetra/discussions) | 1-2 days |
+| 📧 **Direct Contact** | kasimlohar@example.com | 3-5 days |
+
+### 📚 Resources
+
+- **📖 Documentation**: [Wiki](https://github.com/kasimlohar/kurukshetra/wiki)
+- **🎥 Video Tutorials**: [YouTube Playlist](https://youtube.com/playlist?list=your-playlist)
+- **💬 Community Chat**: [Discord Server](https://discord.gg/your-invite)
+- **📱 Social Media**: [@ConfluxAI](https://twitter.com/confluxai)
+
+---
+
+## 🧪 Testing & Quality
+
+### 🔧 Development Workflow
+
+```bash
+# Install dependencies
+npm install
+
+# Development server with hot reload
+npm run dev
+
+# Type checking
+npm run check
+
+# Build for production
+npm run build
+
+# Build analysis (bundle size)
+npm run build:analyze
+```
+
+### ✅ Accessibility Testing
+
+The application includes comprehensive accessibility features:
+
+- **Keyboard Navigation**: Full keyboard support with proper tab order
+- **Screen Reader Support**: ARIA labels and semantic HTML structure  
+- **Color Contrast**: WCAG AA compliant color schemes in both themes
+- **Motion Preferences**: Respects `prefers-reduced-motion` setting
+- **Focus Management**: Visible focus indicators and proper focus trapping
+
+**Manual Testing Checklist:**
+
+- [ ] Navigate entire app using only keyboard (Tab, Enter, Space, Arrow keys)
+- [ ] Test with screen reader (NVDA, JAWS, or VoiceOver)
+- [ ] Verify color contrast in both light and dark themes
+- [ ] Test theme persistence across browser sessions
+- [ ] Validate upload accessibility with aria-live announcements
+
+### 📊 Performance Metrics
+
+**Build Optimization Features:**
+
+- **Code Splitting**: Automatic route-based splitting with lazy loading
+- **Tree Shaking**: Dead code elimination for optimal bundle sizes
+- **Asset Optimization**: Image optimization and progressive loading
+- **Caching Strategy**: Intelligent browser caching with service workers
+
+**Expected Performance:**
+
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s  
+- **Cumulative Layout Shift**: < 0.1
+- **Bundle Size**: Core < 200KB, Total < 1MB
+
+### 🔄 CI/CD Pipeline
+
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  test-and-deploy:
+    - name: Install dependencies
+    - name: Type check
+    - name: Build application  
+    - name: Run accessibility tests
+    - name: Deploy to production
+```
+
+---
+
+## 🙏 Acknowledgments
+
+### 🤝 Core Contributors
+
+- **[kasimlohar](https://github.com/kasimlohar)** - Project Creator & Lead Developer
+- **[Contributors](https://github.com/kasimlohar/kurukshetra/graphs/contributors)** - All amazing contributors
+
+### 🛠️ Built With
+
+**Frontend Technologies:**
+- [React](https://reactjs.org/) - UI Framework
+- [TypeScript](https://www.typescriptlang.org/) - Type Safety
+- [Vite](https://vitejs.dev/) - Build Tool
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Radix UI](https://www.radix-ui.com/) - Component Primitives
+
+**Backend Technologies:**  
+- [Node.js](https://nodejs.org/) - Runtime Environment
+- [Express.js](https://expressjs.com/) - Web Framework
+- [Drizzle ORM](https://orm.drizzle.team/) - Database ORM
+- [Passport.js](http://www.passportjs.org/) - Authentication
+
+**AI & Automation:**
+- [n8n](https://n8n.io/) - Workflow Automation
+- [Google Gemini](https://ai.google.dev/) - Language Model
+- [Pinecone](https://www.pinecone.io/) - Vector Database
+- [OpenAI](https://openai.com/) - Embeddings API
+
+**Infrastructure:**
+- [Vercel](https://vercel.com/) - Deployment Platform
+- [PostgreSQL](https://www.postgresql.org/) - Database
+- [Docker](https://www.docker.com/) - Containerization
+
+### 🌟 Special Thanks
+
+- **n8n Community** for excellent workflow automation tools
+- **Google AI** for providing free Gemini API access
+- **Vercel** for seamless deployment and hosting
+- **Open Source Community** for amazing libraries and tools
+
+---
+
+<div align="center">
+
+## ⭐ Show Your Support
+
+If you find ConfluxAI helpful, please consider:
+
+[![GitHub stars](https://img.shields.io/github/stars/kasimlohar/kurukshetra?style=social)](https://github.com/kasimlohar/kurukshetra/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/kasimlohar/kurukshetra?style=social)](https://github.com/kasimlohar/kurukshetra/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/kasimlohar/kurukshetra?style=social)](https://github.com/kasimlohar/kurukshetra/watchers)
+
+**Built with ❤️ by [kasimlohar](https://github.com/kasimlohar) and the ConfluxAI community**
+
+[⭐ Star this repo](https://github.com/kasimlohar/kurukshetra) • [🐛 Report Bug](https://github.com/kasimlohar/kurukshetra/issues) • [✨ Request Feature](https://github.com/kasimlohar/kurukshetra/issues) • [💬 Join Discussion](https://github.com/kasimlohar/kurukshetra/discussions)
+
+---
+
+*© 2025 ConfluxAI. Licensed under MIT. Made with 💜 for the AI community.*
+
+</div>

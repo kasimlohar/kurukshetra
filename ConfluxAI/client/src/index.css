@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced Design System with Modern Color Palette and Typography 
+All colors MUST be HSL for consistency and theming support.
+*/
+
+@layer base {
+  :root {
+    /* Enhanced Background Colors with semantic meaning */
+    --bg-h: 220;
+    --bg-s: 20%;
+    --bg-l: 99%;
+    --background: var(--bg-h) var(--bg-s) var(--bg-l);
+    --foreground: 222.2 84% 4.9%;
+
+    /* Card Colors with subtle warmth */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    /* Popover Colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Modern Primary Colors - Deep Blue */
+    --primary-h: 221;
+    --primary-s: 83%;
+    --primary-l: 53%;
+    --primary: var(--primary-h) var(--primary-s) var(--primary-l);
+    --primary-foreground: 210 40% 98%;
+
+    /* Refined Secondary Colors */
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    /* Sophisticated Muted Colors */
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    /* Enhanced Accent Colors */
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    /* Modern Destructive Colors */
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Refined Border and Input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: var(--primary-h) var(--primary-s) var(--primary-l);
+
+    --radius: 0.5rem;
+
+    /* Enhanced Glassmorphism Variables */
+    --glass-bg: 255 255 255 / 0.06;
+    --glass-bg-strong: 255 255 255 / 0.12;
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-border-strong: rgba(255, 255, 255, 0.18);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --glass-shadow-strong: 0 16px 64px 0 rgba(31, 38, 135, 0.25);
+    
+    /* Enhanced Radius System */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+
+    /* Sidebar Variables */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Animation & Motion Variables */
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 350ms;
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Dark mode - Rich dark backgrounds */
+    --bg-h: 224;
+    --bg-s: 71%;
+    --bg-l: 4%;
+    --background: var(--bg-h) var(--bg-s) var(--bg-l);
+    --foreground: 210 20% 98%;
+
+    /* Dark cards with subtle depth */
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    /* Dark popover */
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    /* Dark mode primary - Bright accent */
+    --primary-h: 217;
+    --primary-s: 91%;
+    --primary-l: 60%;
+    --primary: var(--primary-h) var(--primary-s) var(--primary-l);
+    --primary-foreground: 220.9 39.3% 11%;
+
+    /* Dark secondary with depth */
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    /* Dark muted tones */
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    /* Dark accent */
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    /* Dark destructive */
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* Dark borders and inputs */
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: var(--primary-h) var(--primary-s) var(--primary-l);
+
+    /* Dark glassmorphism */
+    --glass-bg: 0 0 0 / 0.12;
+    --glass-bg-strong: 0 0 0 / 0.25;
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-border-strong: rgba(255, 255, 255, 0.12);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    --glass-shadow-strong: 0 16px 64px 0 rgba(0, 0, 0, 0.5);
+
+    /* Dark sidebar */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Enhanced Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  /* Custom animations for modern UI */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.3s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.2s ease-out;
+  }
+
+  /* Enhanced Glass morphism utilities */
+  .glass {
+    background: rgba(var(--glass-bg));
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--glass-shadow);
+    transition: all var(--duration-normal) var(--ease-smooth);
+  }
+
+  .glass-strong {
+    background: rgba(var(--glass-bg-strong));
+    backdrop-filter: blur(16px) saturate(200%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    border: 1px solid var(--glass-border-strong);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--glass-shadow-strong);
+    transition: all var(--duration-normal) var(--ease-smooth);
+  }
+
+  .glass:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glass-shadow-strong);
+  }
+
+  /* Fallback for browsers without backdrop-filter support */
+  @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .glass, .glass-strong {
+      background: rgba(255, 255, 255, 0.85);
+    }
+    .dark .glass, .dark .glass-strong {
+      background: rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  /* Motion utilities with respect for prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    
+    .glass, .glass-strong {
+      transition: none;
+    }
+    
+    .glass:hover {
+      transform: none;
+    }
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    background: linear-gradient(to right, hsl(221 83% 53%), hsl(262 83% 58%), hsl(221 83% 53%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
