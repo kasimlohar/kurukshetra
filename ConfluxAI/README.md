@@ -1,15 +1,5 @@
-# 🤖 ConfluxAI - AI-Powered Multi-Media Knowl### 📤 File Upload System
-*Drag & drop multi-media file processing*
+# 🤖 ConfluxAI - AI-Powered Multi-Media Knowledge Base
 
-<img src="docs/screenshots/file-upload.png" alt="File Upload System" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
-
-</div>
-
-## 📋 Table of Contents/screenshots/file-upload.png" alt="File Upload System" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
-
-</div>ocs/screenshots/file-upload.png" alt="File Upload System" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
-
-</div>
 ## 📋 Table of Contents
 <div align="center">
 
@@ -67,10 +57,6 @@
 - [Configuration](#-configuration)
 - [Deployment](#-deployment)
 - [Development](#️-development)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Support](#-support--issues)
-- [Roadmap](#-roadmap)
 
 ## ✨ Features
 
@@ -815,48 +801,6 @@ Vote for features on our [GitHub Discussions](https://github.com/kasimlohar/kuru
 
 ---
 
-<div align="center">
-
-## 📜 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-### 📄 License Summary
-
-✅ **Permitted**: Commercial use, modification, distribution, private use  
-⚠️ **Required**: Include copyright and license notice  
-❌ **Forbidden**: Hold liable  
-
-</div>
-
----
-
-## 🆘 Support & Issues
-
-### 🐛 Found a Bug?
-
-1. **Check existing issues**: [GitHub Issues](https://github.com/kasimlohar/kurukshetra/issues)
-2. **Create detailed report**: Include steps to reproduce, expected behavior, screenshots
-3. **Label appropriately**: Use `bug`, `enhancement`, `question` labels
-
-### 💬 Need Help?
-
-| Type | Platform | Response Time |
-|------|----------|---------------|
-| 🐛 **Bug Reports** | [GitHub Issues](https://github.com/kasimlohar/kurukshetra/issues) | 24-48 hours |
-| 💡 **Feature Requests** | [GitHub Discussions](https://github.com/kasimlohar/kurukshetra/discussions) | 2-3 days |
-| ❓ **General Questions** | [GitHub Discussions](https://github.com/kasimlohar/kurukshetra/discussions) | 1-2 days |
-| 📧 **Direct Contact** | kasimlohar@example.com | 3-5 days |
-
-### 📚 Resources
-
-- **📖 Documentation**: [Wiki](https://github.com/kasimlohar/kurukshetra/wiki)
-- **🎥 Video Tutorials**: [YouTube Playlist](https://youtube.com/playlist?list=your-playlist)
-- **💬 Community Chat**: [Discord Server](https://discord.gg/your-invite)
-- **📱 Social Media**: [@ConfluxAI](https://twitter.com/confluxai)
-
----
-
 ## 🧪 Testing & Quality
 
 ### 🔧 Development Workflow
@@ -887,106 +831,6 @@ The application includes comprehensive accessibility features:
 - **Color Contrast**: WCAG AA compliant color schemes in both themes
 - **Motion Preferences**: Respects `prefers-reduced-motion` setting
 - **Focus Management**: Visible focus indicators and proper focus trapping
-
-**Manual Testing Checklist:**
-
-- [ ] Navigate entire app using only keyboard (Tab, Enter, Space, Arrow keys)
-- [ ] Test with screen reader (NVDA, JAWS, or VoiceOver)
-- [ ] Verify color contrast in both light and dark themes
-- [ ] Test theme persistence across browser sessions
-- [ ] Validate upload accessibility with aria-live announcements
-
-### 📊 Performance Metrics
-
-**Build Optimization Features:**
-
-- **Code Splitting**: Automatic route-based splitting with lazy loading
-- **Tree Shaking**: Dead code elimination for optimal bundle sizes
-- **Asset Optimization**: Image optimization and progressive loading
-- **Caching Strategy**: Intelligent browser caching with service workers
-
-**Expected Performance:**
-
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s  
-- **Cumulative Layout Shift**: < 0.1
-- **Bundle Size**: Core < 200KB, Total < 1MB
-
-### 🔄 CI/CD Pipeline
-
-```yaml
-# .github/workflows/deploy.yml
-name: Deploy
-on:
-  push:
-    branches: [main]
-jobs:
-  test-and-deploy:
-    - name: Install dependencies
-    - name: Type check
-    - name: Build application  
-    - name: Run accessibility tests
-    - name: Deploy to production
-```
-
----
-
-## 🙏 Acknowledgments
-
-### 🤝 Core Contributors
-
-- **[kasimlohar](https://github.com/kasimlohar)** - Project Creator & Lead Developer
-- **[Contributors](https://github.com/kasimlohar/kurukshetra/graphs/contributors)** - All amazing contributors
-
-### 🛠️ Built With
-
-**Frontend Technologies:**
-- [React](https://reactjs.org/) - UI Framework
-- [TypeScript](https://www.typescriptlang.org/) - Type Safety
-- [Vite](https://vitejs.dev/) - Build Tool
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [Radix UI](https://www.radix-ui.com/) - Component Primitives
-
-**Backend Technologies:**  
-- [Node.js](https://nodejs.org/) - Runtime Environment
-- [Express.js](https://expressjs.com/) - Web Framework
-- [Drizzle ORM](https://orm.drizzle.team/) - Database ORM
-- [Passport.js](http://www.passportjs.org/) - Authentication
-
-**AI & Automation:**
-- [n8n](https://n8n.io/) - Workflow Automation
-- [Google Gemini](https://ai.google.dev/) - Language Model
-- [Pinecone](https://www.pinecone.io/) - Vector Database
-- [OpenAI](https://openai.com/) - Embeddings API
-
-**Infrastructure:**
-- [Vercel](https://vercel.com/) - Deployment Platform
-- [PostgreSQL](https://www.postgresql.org/) - Database
-- [Docker](https://www.docker.com/) - Containerization
-
-### 🌟 Special Thanks
-
-- **n8n Community** for excellent workflow automation tools
-- **Google AI** for providing free Gemini API access
-- **Vercel** for seamless deployment and hosting
-- **Open Source Community** for amazing libraries and tools
-
----
-
-<div align="center">
-
-## ⭐ Show Your Support
-
-If you find ConfluxAI helpful, please consider:
-
-[![GitHub stars](https://img.shields.io/github/stars/kasimlohar/kurukshetra?style=social)](https://github.com/kasimlohar/kurukshetra/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/kasimlohar/kurukshetra?style=social)](https://github.com/kasimlohar/kurukshetra/network/members)
-[![GitHub watchers](https://img.shields.io/github/watchers/kasimlohar/kurukshetra?style=social)](https://github.com/kasimlohar/kurukshetra/watchers)
-
-**Built with ❤️ by [kasimlohar](https://github.com/kasimlohar) and the ConfluxAI community**
-
-[⭐ Star this repo](https://github.com/kasimlohar/kurukshetra) • [🐛 Report Bug](https://github.com/kasimlohar/kurukshetra/issues) • [✨ Request Feature](https://github.com/kasimlohar/kurukshetra/issues) • [💬 Join Discussion](https://github.com/kasimlohar/kurukshetra/discussions)
-
 ---
 
 *© 2025 ConfluxAI. Licensed under MIT. Made with 💜 for the AI community.*
